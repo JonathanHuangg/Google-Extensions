@@ -8,15 +8,15 @@ if (article) {
 
     const wordCount =[...words].length;
     const readingTime = Math.round(wordCount / 200);
-    const badge = document.createElement("p")
+    const badge = document.createElement("p") //creates html element
 
-    badge.classList.add("color-secondary-text", "type--caption");
-    badge.textContent = `⏱️ ${readingTime} min read`;
+    badge.classList.add("color-secondary-text", "type--caption"); //adds html element
+    badge.textContent = `⏱️ ${readingTime} min read`; //This is what the badge says
 
     const heading = article.querySelector("h1");
 
     const date = article.querySelector("time")?.parentNode;
 
-    (date ?? heading).insertAdjacentElement("afterend", badge);
+    (date ?? heading).insertAdjacentElement("afterend", badge); 
 
 }
